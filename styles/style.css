@@ -600,7 +600,40 @@ padding: 60px 20px;
 #toast-close:focus {
   outline: none;
 }
+/* ------------------ Slide-in Animation Effects ------------------ */
 
+/* Initial hidden state */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(50px); /* default fallback: slide from bottom */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Slide in from left */
+.slide-in-left {
+  transform: translateX(-100px);
+}
+
+.slide-in-left.section-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide in from right */
+.slide-in-right {
+  transform: translateX(100px);
+}
+
+.slide-in-right.section-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide in from bottom */
+.slide-in-bottom.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
