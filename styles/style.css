@@ -635,34 +635,24 @@ padding: 60px 20px;
   transform: translateY(0);
 }
 
-/* Mobile responsiveness fix */
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
+/* Mobile White Bar & Overflow Fix */
+/* ========================= */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-  /* Scale down animated elements */
-  .animated-element {
-    transform: scale(1) !important; /* Prevent oversized scale on mobile */
-    animation-duration: 0.5s !important; /* Optional: speed up on mobile */
-  }
-
-  /* Fix any specific sections */
-  .hero, .section, .container {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Prevent overflow caused by animations */
-  * {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
+.hero,
+.about-section,
+.service,
+.contact-section,
+footer,
+.navbar .nav-menu {
+  overflow-x: hidden;
 }
 
 
-
+}
 @media screen and (max-width: 900px) {
   :root {
     --font-size-m: 1rem;
@@ -791,6 +781,18 @@ padding: 60px 20px;
     flex-direction: column;
     gap: 20px;
   }
+
+  
+  .section-hidden,
+  .slide-in-left,
+  .slide-in-right,
+  .slide-in-bottom {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+
+  
   
 }
 
