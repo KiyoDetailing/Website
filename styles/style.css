@@ -635,6 +635,32 @@ padding: 60px 20px;
   transform: translateY(0);
 }
 
+/* Mobile responsiveness fix */
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Scale down animated elements */
+  .animated-element {
+    transform: scale(1) !important; /* Prevent oversized scale on mobile */
+    animation-duration: 0.5s !important; /* Optional: speed up on mobile */
+  }
+
+  /* Fix any specific sections */
+  .hero, .section, .container {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Prevent overflow caused by animations */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 
 
 @media screen and (max-width: 900px) {
@@ -776,3 +802,4 @@ padding: 60px 20px;
     flex-direction: column-reverse;
     justify-content: center;
   }
+
